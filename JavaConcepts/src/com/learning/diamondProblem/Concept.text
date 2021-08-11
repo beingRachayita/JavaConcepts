@@ -1,0 +1,16 @@
+Diamond Problem
+
+
+Diamond Problem occurs when a single class extends multiple classes, also known as multiple Inheritence. If there is a method with same signature present in both the parent class, compiler can't decide which method to call due to the ambiguity.
+
+Java compiler doesn't let class extend multiple classes but it allows to implement various Interfaces.
+
+There are few scenarios to keep in mind:
+
+1. Two Interface have a single method with same method signature. This is successfully compiled
+
+2. Two Interfaces have same method name but only return type is different. This will throw compilation error. There is an ambiguity & compiler can't resolve it.
+
+3. Two Interfaces have same method name but return type & arguments are different this will work successfully
+
+4. A Base class & an Interface have the same method. Interface has a default Implementation (Java 8 onwards) of method as well. The Child class extends Base class & Implements Interface. The method definition in the base class is used & interface is ignored. This helps maintain compatibility with the previous Java versions when default was not introduced. 
